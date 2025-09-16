@@ -53,3 +53,9 @@ dkms.conf
 
 # Build directories
 build/
+
+# VS Code files
+.vscode/
+
+# CMake Utils files
+CMakePresets.json
