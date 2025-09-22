@@ -5,9 +5,13 @@
 ```zsh
 git submodule add https://github.com/raspberrypi/pico-sdk extern/pico-sdk
 git submodule update --init --recursive
+
+git submodule add https://github.com/vmrnd/tinyusb extern/tinyusb
+git submodule update --init --recursive
 ```
 
 ```zsh
+brew tap ArmMbed/homebrew-formulae
 brew install --cask gcc-arm-embedded
 brew install cmake
 brew install ninja
@@ -75,4 +79,8 @@ cmake -S . -B build -DPICO_PLATFORM=rp2350 -DPICO_BOARD=waveshare_rp2350_usb_a
     }
   ]
 }
+```
+
+```zsh
+picotool load build/waveshare-debug/hello_world.uf2
 ```
