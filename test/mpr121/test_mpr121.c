@@ -7,7 +7,6 @@ void tearDown(void) {}
 
 void test_unity_basic(void) { TEST_ASSERT_EQUAL_INT(1, 1); }
 
-
 int main(void) {
   stdio_init_all();
   printf("Starting Unity tests on Pico...\n");
