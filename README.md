@@ -45,3 +45,41 @@ Edit wokwi.toml and diagram.json to match your project structure.
 
 In VSCode, open Command Palette with
 Command+Shift+P -> "Wokwi: Start Simulator"
+
+## CMake Presets
+
+```json
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 13,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "debug",
+      "hidden": false,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "description": "Debug build for RP2040",
+      "cacheVariables": {
+        "PICO_PLATFORM": "rp2040",
+        "PICO_BOARD": "pico",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "TRUE"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug",
+      "description": "Build main target",
+      "displayName": "Build",
+      "configurePreset": "debug",
+      "configuration": "Debug",
+      "targets": ["main"]
+    }
+  ]
+}
+```
