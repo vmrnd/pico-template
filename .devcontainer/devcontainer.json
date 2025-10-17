@@ -1,26 +1,15 @@
 {
-  "name": "Raspberry Pi Pico SDK DevContainer",
-  "dockerFile": "Dockerfile",
-  "context": ".",
-  "workspaceFolder": "/workspace",
-  "shutdownAction": "stopContainer",
+  "name": "pico-template",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "pico",
+  "workspaceFolder": "/app",
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-vscode.cpptools-extension-pack",
-        "wokwi.wokwi-vscode"
+        "wokwi.wokwi-vscode",
+        "esbenp.prettier-vscode"
       ]
-    },
-    "settings": {
-      "terminal.integrated.defaultProfile.linux": "bash",
-      "terminal.integrated.profiles.linux": {
-        "bash": {
-          "path": "/bin/bash"
-        }
-      }
     }
-  },
-  "mounts": [
-    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
-  ]
+  }
 }

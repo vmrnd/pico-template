@@ -12,3 +12,5 @@ RUN apt-get update && apt-get install -y \
     ninja-build
 
 RUN rm -rf /var/lib/apt/lists/*
+
+CMD [ "sleep", "infinity" ]

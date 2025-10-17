@@ -1,0 +1,8 @@
+name: pico-template
+services:
+  pico:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app

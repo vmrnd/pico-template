@@ -57,8 +57,5 @@ build/
 # VS Code files
 .vscode/
 
-# CMake Utils files
-CMakePresets.json
-
 # DS Store
 .DS_Store
